@@ -15,7 +15,7 @@ namespace ListViewFastScroll
 
         protected override void OnAppearing()
         {
-            PersonList aList = new PersonList()
+            PersonList aGroup = new PersonList()
             {
                 new Person {FirstName = "Michael", LastName = "Arenas"},
                 new Person {FirstName = "Michael", LastName = "Arenas"},
@@ -28,9 +28,9 @@ namespace ListViewFastScroll
                 new Person {FirstName = "Michael", LastName = "Arenas"},
                 new Person {FirstName = "Michael", LastName = "Arenas"},
             };
-            aList.Heading = "A";
+            aGroup.Heading = "A";
 
-            PersonList bList = new PersonList()
+            PersonList bGroup = new PersonList()
             {
                 new Person {FirstName = "Johny", LastName = "Ben"},
                 new Person {FirstName = "Johny", LastName = "Ben"},
@@ -44,9 +44,9 @@ namespace ListViewFastScroll
                 new Person {FirstName = "Johny", LastName = "Ben"},
                 new Person {FirstName = "Johny", LastName = "Ben"},
             };
-            bList.Heading = "B";
+            bGroup.Heading = "B";
 
-            PersonList dList = new PersonList()
+            PersonList dGroup = new PersonList()
             {
                 new Person { FirstName = "Dave", LastName = "Devlin" },
                 new Person { FirstName = "Dave", LastName = "Devlin" },
@@ -61,9 +61,9 @@ namespace ListViewFastScroll
                 new Person { FirstName = "Dave", LastName = "Devlin" },
             };
 
-            dList.Heading = "D";
+            dGroup.Heading = "D";
 
-            PersonList jList = new PersonList()
+            PersonList jGroup = new PersonList()
             {
                 new Person { FirstName = "Ruby", LastName = "Jane" },
                 new Person { FirstName = "Ruby", LastName = "Jane" },
@@ -77,25 +77,9 @@ namespace ListViewFastScroll
                 new Person { FirstName = "Ruby", LastName = "Jane" },
                 new Person { FirstName = "Ruby", LastName = "Jane" },
             };
-            jList.Heading = "J";
+            jGroup.Heading = "J";
 
-            PersonList gList = new PersonList()
-            {
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-                new Person { FirstName = "Bruno", LastName = "Mars" },
-            };
-
-            gList.Heading = "G";
-
-            PersonList mList = new PersonList()
+            PersonList gGroup = new PersonList()
             {
                 new Person { FirstName = "Bruno", LastName = "Mars" },
                 new Person { FirstName = "Bruno", LastName = "Mars" },
@@ -109,9 +93,25 @@ namespace ListViewFastScroll
                 new Person { FirstName = "Bruno", LastName = "Mars" },
             };
 
-            mList.Heading = "M";
+            gGroup.Heading = "G";
 
-            PersonList nList = new PersonList()
+            PersonList mGroup = new PersonList()
+            {
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+                new Person { FirstName = "Bruno", LastName = "Mars" },
+            };
+
+            mGroup.Heading = "M";
+
+            PersonList nGroup = new PersonList()
             {
                 new Person { FirstName = "Shikamaru", LastName = "Nara" },
                 new Person { FirstName = "Shikamaru", LastName = "Nara" },
@@ -126,9 +126,9 @@ namespace ListViewFastScroll
                 new Person { FirstName = "Shikamaru", LastName = "Nara" },
             };
 
-            nList.Heading = "N";
+            nGroup.Heading = "N";
 
-            PersonList sList = new PersonList()
+            PersonList sGroup = new PersonList()
             {
                 new Person { FirstName = "Sasha", LastName = "Swift" },
                 new Person { FirstName = "Sasha", LastName = "Swift" },
@@ -142,9 +142,9 @@ namespace ListViewFastScroll
                 new Person { FirstName = "Sasha", LastName = "Swift" },
             };
 
-            sList.Heading = "S";
+            sGroup.Heading = "S";
 
-            PersonList uList = new PersonList()
+            PersonList uGroup = new PersonList()
             {
                 new Person { FirstName = "Naruto", LastName = "Uzumaki" },
                 new Person { FirstName = "Naruto", LastName = "Uzumaki" },
@@ -159,19 +159,19 @@ namespace ListViewFastScroll
                 new Person { FirstName = "Naruto", LastName = "Uzumaki" },
             };
 
-            uList.Heading = "U";
+            uGroup.Heading = "U";
 
             List<PersonList> list = new List<PersonList>()
             {
-                aList,
-                bList,
-                dList,
-                jList,
-                gList,
-                mList,
-                nList,
-                sList,
-                uList,
+                aGroup,
+                bGroup,
+                dGroup,
+                jGroup,
+                gGroup,
+                mGroup,
+                nGroup,
+                sGroup,
+                uGroup,
             };
 
             _observableList = new ObservableCollection<PersonList>(list);
